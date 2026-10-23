@@ -63,6 +63,9 @@ export const metadata: Metadata = {
     description: siteConfig.description,
   },
   // images: ["/og-image.jpg"]
+  other: {
+    "google-adsense-account": "ca-pub-7895471731403334",
+  },
 };
 
 export default function RootLayout({
@@ -75,7 +78,8 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}
+      <body className="min-h-full flex flex-col">
+        {children}
         <GoogleAnalytics gaId="G-QE3RZQ9D89" />
       </body>
     </html>
